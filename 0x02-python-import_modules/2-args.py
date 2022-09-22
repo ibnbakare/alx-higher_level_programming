@@ -17,7 +17,6 @@ def arguments():
         if (index > 0):
             print("{}: {}".format(index, arg))
 
+
 if __name__ == "__main__":
-
-
     arguments()
