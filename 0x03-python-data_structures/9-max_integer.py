@@ -8,5 +8,3 @@ def max_integer(my_list=[]):
         if (i > max):
             max = i
     return (max)
-if __name__ == "__main__":
-    print(max_integer([-9,1,2,3,-30,100]))
