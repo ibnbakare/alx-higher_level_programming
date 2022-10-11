@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 class Square:
     '''
-        defining square
+        Defining square
     '''
 
-    def __init__(self, size):
+    def __init__(self, size = 0):
         '''
-            initialization of instance attribute
+        Initialization of instance attribute
             Args:
-            size(int):0 or positive
+        size(int):0 or positive
         '''
 
         if not isinstance(size, int):
