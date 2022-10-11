@@ -4,5 +4,5 @@ class Square():
     An empty class
 
     '''
-
-    pass
+    def Size(self, size):
+        pass
