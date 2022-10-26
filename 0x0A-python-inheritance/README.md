@@ -120,5 +120,3 @@
 
 ```
 
-## Auth:
-### **_Afolabi John Oluwaseun_**
