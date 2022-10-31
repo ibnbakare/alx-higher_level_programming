@@ -1,7 +1,1 @@
-# 0x0B. Python - Input/Output
-
-```diff
-
-- Python
-
-```
+## Working Input\output methods and JSON modules
