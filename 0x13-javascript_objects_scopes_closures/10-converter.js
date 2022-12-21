@@ -4,4 +4,3 @@ exports.converter = function (base) {
       return a.toString(base);
     };
   };
-  
