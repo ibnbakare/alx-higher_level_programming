@@ -1,26 +1,23 @@
 #!/usr/bin/node
+let request = require('request');
+let url = process.argv[2];
+let myDict = {};
 
-const request = require('request');
-const url = process.argv[2];
-
-request(url, function (err, response, body) {
+request(url, function (err, data, body) {
   if (err) {
     console.log(err);
-  } else if (response.statusCode === 200) {
-    const completed = {};
-    const tasks = JSON.parse(body);
-    for (const i in tasks) {
-      const task = tasks[i];
-      if (task.completed === true) {
-        if (completed[task.userId] === undefined) {
-          completed[task.userId] = 1;
+  } else {
+    let response = JSON.parse(body);
+
+    for (let i = 0; i < response.length; i++) {
+      if (response[i]['completed'] === true) {
+        if (myDict[response[i]['userId']] === undefined) {
+          myDict[response[i]['userId']] = 1;
         } else {
-          completed[task.userId]++;
+          myDict[response[i]['userId']] += 1;
         }
       }
     }
-    console.log(completed);
-  } else {
-    console.log('An error occured. Status code: ' + response.statusCode);
   }
+  console.log(myDict);
 });
